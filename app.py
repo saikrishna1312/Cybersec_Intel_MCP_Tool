@@ -1,6 +1,6 @@
 import gradio as gr
 import json
-from threat_intel import fetch_cisa_cves
+from app.threat_intel import fetch_cisa_cves
 
 def serialize_cves(cve_list):
     return [cve.model_dump() for cve in cve_list]
