@@ -13,7 +13,7 @@ This project demonstrates:
 - MCP-Compliant Server using Gradio with MCP Protocol enabled
 - Multi-tool architecture with support for querying latest CVEs and CWE information
 
-## 🌐 MCP Tools
+## MCP Tools
 
 ### Tool 1 — `get_latest_threats`(app.py)
 - Fetches latest CVEs from CISA KEV.
@@ -24,3 +24,23 @@ This project demonstrates:
 - Fetches full CWE information using CWE scraper based on given CWE-ID.
 
 Future work involve extending the tool to automatically map CVEs to ATT&CK techniques
+
+# client.py — CyberSec Intel Tool (MCP Client)
+The client.py file is a Model Context Protocol (MCP) client built to interact with the CyberSec Intel MCP Tool hosted on Hugging Face Spaces. It enables natural language interaction with cybersecurity tools using OpenAI’s GPT-4 model.
+
+## What This Client Does
+Connects to the running MCP server (/gradio_api/mcp/sse endpoint).
+
+Dynamically loads available tools via the MCPClient.
+
+Uses OpenAI GPT-4 (OpenAIServerModel) as the core reasoning engine.
+
+Wraps the model and tools into a CodeAgent from the smolagents framework.
+
+Launches a Gradio-based chat interface where users can ask questions like:
+
+      - "Show me latest threats after 2025-06-01"
+      
+      - "What is CWE-306 and what are its consequences?"
+
+Returns summarized responses or invokes tools when needed.
