@@ -1,6 +1,6 @@
 import requests
 import time
-from models.cve_model import CVE
+from app.models.cve_model import CVE
 import urllib3
 import json
 from bs4 import BeautifulSoup
