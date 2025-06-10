@@ -20,7 +20,7 @@ This project demonstrates:
 - Enriches with CVSS scores (CVE-AWG).
 - Further enriches with CWE descriptions, mitigations, and consequences.
 
-### Tool 2 — `get_cwe_details` - This is exposed in a seperate mcp server (python file mcp_server_cwe.py).
+### Tool 2 — `get_cwe_details` - This is exposed in a seperate mcp server (python file app_cwe.py).
 - Fetches full CWE information using CWE scraper based on given CWE-ID.
 
 Future work involve extending the tool to automatically map CVEs to ATT&CK techniques
@@ -44,3 +44,5 @@ Launches a Gradio-based chat interface where users can ask questions like:
       - "What is CWE-306 and what are its consequences?"
 
 Returns summarized responses or invokes tools when needed.
+
+`client2.py` is the client for the CWE tool (app_cwe.py)
