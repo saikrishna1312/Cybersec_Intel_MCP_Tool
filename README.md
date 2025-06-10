@@ -25,7 +25,7 @@ This project demonstrates:
 
 Future work involve extending the tool to automatically map CVEs to ATT&CK techniques
 
-# client.py — CyberSec Intel Tool (MCP Client)
+# `client.py` — CyberSec Intel Tool (MCP Client)
 The client.py file is a Model Context Protocol (MCP) client built to interact with the CyberSec Intel MCP Tool hosted on Hugging Face Spaces. It enables natural language interaction with cybersecurity tools using OpenAI’s GPT-4 model.
 
 ## What This Client Does
